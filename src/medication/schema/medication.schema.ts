@@ -27,9 +27,6 @@ class Treatment {
 @Schema()
 export class Medication {
   @Prop()
-  name: string;
-
-  @Prop()
   conclution: string;
 
   @Prop()
@@ -43,19 +40,3 @@ export class Medication {
 }
 
 export const MedicationSchema = SchemaFactory.createForClass(Medication);
-
-// interface Medication {
-//     conclution: string,
-//     time: number,
-//     symptoms: string[],
-//     treatment: [{ name: string }]
-// }
-
-// export type MedicationDocument = HydratedDocument<Medication>;
-
-// export const MedicationSchema = new mongoose.Schema({
-//     conclution: String,
-//     time: {type: Date, default: Date.now},
-//     symptoms: [String],
-//     treatment: [{ name: String }]
-// })
