@@ -4,6 +4,8 @@ import { MedicationController } from './medication.controller';
 import { Medication, MedicationSchema } from './schema/medication.schema';
 import { MedicationService } from './medication.service';
 import { GetMedMiddleware } from './getMed.middleware';
+import { APP_GUARD } from '@nestjs/core';
+import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
 @Module({
   imports: [

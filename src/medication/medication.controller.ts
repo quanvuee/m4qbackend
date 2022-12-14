@@ -14,13 +14,13 @@ import { CustomRequest } from './getMed.middleware';
 import { MedicationService } from './medication.service';
 import { Medication } from './schema/medication.schema';
 
-@Controller('medication')
+@Controller('medications')
 export class MedicationController {
   constructor(private medService: MedicationService) {}
 
   @Post()
   async create(@Body() createMedDto: CreateMedicaionDto) {
-    this.medService.create(createMedDto);
+    return this.medService.create(createMedDto);
   }
 
   @Get()

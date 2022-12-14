@@ -27,7 +27,7 @@ class Treatment {
 @Schema()
 export class Medication {
   @Prop()
-  conclution: string;
+  conclusion: string;
 
   @Prop()
   time: number;
